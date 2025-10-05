@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Dark Theme (Default) */
+  :root,
+  .dark-theme {
+    --color-bg: 11 15 18;
+    --color-panel: 15 23 32;
+    --color-neon: 0 255 159;
+    --color-cyan: 0 212 255;
+    --color-sub: 148 163 184;
+    --color-danger: 255 56 100;
+    --color-text: 255 255 255;
+    --color-border: 0 255 159;
+    --selection-bg: rgba(0, 255, 159, 0.3);
+    --matrix-color: #00ff9f;
+    --neon-hex: #00ff9f;
+    --cyan-hex: #00d4ff;
+  }
+
+  /* Light Theme */
+  .light-theme {
+    --color-bg: 248 250 252;
+    --color-panel: 255 255 255;
+    --color-neon: 0 217 126;
+    --color-cyan: 0 136 204;
+    --color-sub: 100 116 139;
+    --color-danger: 239 68 68;
+    --color-text: 15 23 42;
+    --color-border: 0 217 126;
+    --selection-bg: rgba(0, 217, 126, 0.2);
+    --matrix-color: #00d97e;
+    --neon-hex: #00d97e;
+    --cyan-hex: #0088cc;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body {
+    @apply bg-bg font-sans antialiased;
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* Enhanced cursor and interactive elements - only when mouse trail is active */
+.mouse-trail-active * {
+  cursor: none; /* Hide default cursor for custom mouse trail */
+}
+
+.mouse-trail-active a, 
+.mouse-trail-active button, 
+.mouse-trail-active input, 
+.mouse-trail-active textarea, 
+.mouse-trail-active select, 
+.mouse-trail-active [role="button"], 
+.mouse-trail-active .cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Text selection styling */
+::selection {
+  background: var(--selection-bg);
+  color: var(--color-text);
+}
+
+::-moz-selection {
+  background: var(--selection-bg);
+  color: var(--color-text);
+}
+
+/* Smooth animations for all elements */
+* {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-panel/80 backdrop-blur-sm border border-panel/50 rounded-lg;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 20px var(--neon-hex), 0 0 40px var(--neon-hex), 0 0 60px var(--neon-hex);
+  }
+  
+  .terminal-cursor {
+    @apply inline-block w-2 h-5 bg-neon animate-pulse;
+  }
+  
+  .glitch-text {
+    position: relative;
+  }
+  
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .glitch-text::before {
+    animation: glitch-anim-1 0.5s infinite;
+    color: theme('colors.danger');
+    z-index: -1;
+  }
+  
+  .glitch-text::after {
+    animation: glitch-anim-2 0.5s infinite;
+    color: theme('colors.cyan');
+    z-index: -2;
+  }
+  
+  /* Enhanced hover effects */
+  .glass-panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 4px 25px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(0, 255, 159, 0.2);
+  }
+  
+  /* Subtle animations for interactive elements */
+  button:hover, a:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Ambient lighting effect */
+  .ambient-glow {
+    position: relative;
+  }
+  
+  .ambient-glow::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle,
+      rgba(0, 255, 159, 0.05) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: -1;
+    animation: ambient-pulse 8s ease-in-out infinite;
+  }
+}
+
+@keyframes glitch-anim-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-anim-2 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, 2px); }
+  80% { transform: translate(-2px, -2px); }
+}
+
+/* Matrix Mode Effect */
+.matrix-mode {
+  animation: matrix-flicker 0.1s infinite;
+  text-shadow: 0 0 5px theme('colors.neon'), 0 0 10px theme('colors.neon');
+  background: linear-gradient(180deg, rgba(15, 23, 32, 0.95) 0%, rgba(0, 255, 159, 0.05) 100%);
+}
+
+@keyframes matrix-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; }
+}
+
+/* Custom scrollbar */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-neon::-webkit-scrollbar-thumb {
+  background-color: theme('colors.neon');
+  border-radius: 4px;
+}
+
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.neon');
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.cyan');
+}
+
+/* Background pattern for depth */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 255, 159, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(0, 212, 255, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes ambient-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* Memory Game 3D Card Flip Effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}

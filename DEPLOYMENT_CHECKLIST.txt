@@ -1,0 +1,219 @@
+╔═══════════════════════════════════════════════════════════════╗
+║         🚀 PORTFOLIO DEPLOYMENT CHECKLIST                     ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📋 BEFORE DEPLOYMENT - PERSONALIZE YOUR PORTFOLIO
+═══════════════════════════════════════════════════════════════
+
+□ Edit src/data/resume.ts
+  ├─ □ Change name
+  ├─ □ Update email
+  ├─ □ Update phone
+  ├─ □ Update GitHub URL
+  ├─ □ Update LinkedIn URL
+  ├─ □ Add your skills
+  ├─ □ Add your projects
+  ├─ □ Add your experience
+  └─ □ Update about section
+
+□ Replace src/assets/profile.png
+  └─ Add your professional photo
+
+□ Replace public/resume.pdf
+  └─ Add your actual resume PDF
+
+□ Update package.json
+  └─ Change author email to yours
+
+═══════════════════════════════════════════════════════════════
+
+🧪 TEST LOCALLY
+═══════════════════════════════════════════════════════════════
+
+□ Run: npm install
+□ Run: npm run build
+  └─ ✓ Should complete without errors
+
+□ Run: npm run preview
+  └─ ✓ Check http://localhost:4173
+  └─ ✓ Test all features work
+  └─ ✓ Check mobile responsiveness
+  └─ ✓ Test theme toggle
+  └─ ✓ Test animations toggle
+  └─ ✓ Try Easter egg (egg icon or Konami code)
+  └─ ✓ Play games (snake, memory)
+
+═══════════════════════════════════════════════════════════════
+
+📦 SETUP GIT & GITHUB
+═══════════════════════════════════════════════════════════════
+
+□ Create GitHub account
+  └─ URL: https://github.com/signup
+  └─ Username: ___________________________
+
+□ Create new repository
+  └─ URL: https://github.com/new
+  └─ Name: portfolio (or your choice)
+  └─ Visibility: PUBLIC ✓
+  └─ Don't initialize with README
+
+□ Push code to GitHub
+  └─ Run these commands:
+
+    cd /home/aumni/Potfolio/portfolio
+    git init
+    git add .
+    git commit -m "Initial portfolio commit"
+    git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+    git branch -M main
+    git push -u origin main
+
+  └─ ✓ Code pushed successfully
+
+═══════════════════════════════════════════════════════════════
+
+🌐 DEPLOY (Choose ONE platform)
+═══════════════════════════════════════════════════════════════
+
+⭐ OPTION A: NETLIFY (RECOMMENDED)
+═════════════════════════════════════════════
+
+□ Sign up at: https://app.netlify.com/signup
+  └─ Use "Sign up with GitHub"
+
+□ Import repository
+  ├─ Click "Add new site"
+  ├─ Click "Import an existing project"
+  ├─ Choose "GitHub"
+  └─ Select your portfolio repository
+
+□ Configure build
+  ├─ Build command: npm run build
+  ├─ Publish directory: dist
+  └─ Click "Deploy site"
+
+□ Wait for deployment (2-3 minutes)
+
+□ Customize site name
+  ├─ Go to "Site settings"
+  ├─ Click "Change site name"
+  └─ Enter: ___________________________
+
+□ ✓ DEPLOYED!
+  └─ Your URL: https://______________.netlify.app
+
+
+OR
+
+
+🔷 OPTION B: VERCEL
+═════════════════════════════════════════════
+
+□ Sign up at: https://vercel.com/signup
+  └─ Use "Continue with GitHub"
+
+□ Import repository
+  ├─ Click "Add New Project"
+  └─ Select your portfolio repository
+
+□ Deploy
+  └─ Click "Deploy"
+
+□ Wait for deployment (1-2 minutes)
+
+□ ✓ DEPLOYED!
+  └─ Your URL: https://______________.vercel.app
+
+
+OR
+
+
+📘 OPTION C: GITHUB PAGES
+═════════════════════════════════════════════
+
+□ Update vite.config.ts
+  └─ Change: base: '/' to base: '/YOUR_REPO_NAME/'
+
+□ Commit and push changes
+  git add vite.config.ts
+  git commit -m "Configure for GitHub Pages"
+  git push
+
+□ Enable GitHub Pages
+  ├─ Go to repository Settings
+  ├─ Click "Pages" in sidebar
+  └─ Source: GitHub Actions
+
+□ Wait for deployment (3-5 minutes)
+  └─ Check "Actions" tab for progress
+
+□ ✓ DEPLOYED!
+  └─ Your URL: https://YOUR_USERNAME.github.io/YOUR_REPO/
+
+═══════════════════════════════════════════════════════════════
+
+✅ POST-DEPLOYMENT
+═══════════════════════════════════════════════════════════════
+
+□ Visit your live site
+□ Test on desktop browser
+□ Test on mobile device
+□ Check all links work
+□ Test resume download
+□ Test contact form/email links
+□ Share with friends for feedback
+
+═══════════════════════════════════════════════════════════════
+
+📢 SHARE YOUR PORTFOLIO
+═══════════════════════════════════════════════════════════════
+
+□ Add URL to LinkedIn profile
+□ Add URL to GitHub profile
+□ Add URL to resume
+□ Share on social media
+□ Send to recruiters
+□ Add to email signature
+
+Your portfolio URL: _________________________________
+
+═══════════════════════════════════════════════════════════════
+
+🔄 MAKING UPDATES (After Initial Deploy)
+═══════════════════════════════════════════════════════════════
+
+To update your portfolio:
+
+1. Make changes to your code
+2. Test locally: npm run dev
+3. Commit changes:
+   git add .
+   git commit -m "Description of changes"
+   git push
+
+✨ Your site automatically re-deploys! (2-3 minutes)
+
+═══════════════════════════════════════════════════════════════
+
+📚 DOCUMENTATION AVAILABLE
+═══════════════════════════════════════════════════════════════
+
+□ DEPLOY_NOW.md        - Start here! Complete guide
+□ QUICK_DEPLOY.md      - Quick reference card
+□ DEPLOYMENT_GUIDE.md  - Detailed step-by-step
+□ README.md            - Portfolio features
+□ deploy-setup.sh      - Interactive setup script
+
+═══════════════════════════════════════════════════════════════
+
+🎊 YOU'RE READY TO DEPLOY!
+═══════════════════════════════════════════════════════════════
+
+Time to deploy: ~12 minutes
+Time to customize: ~30 minutes
+Total time: ~42 minutes to live portfolio!
+
+Good luck! 🚀
+
+═══════════════════════════════════════════════════════════════

@@ -1,0 +1,49 @@
+SANKALP PANDEY
+SDET & Automation Engineer
+📧 sankalppandey531@gmail.com | 📍 Pune, Maharashtra, India | 🔗 github.com/LogicByteX
+
+PROFESSIONAL SUMMARY
+Results-driven SDET with 4+ years of experience building resilient automation frameworks and performance tests. I obsess over edge cases, reduce manual toil, and make flaky tests a thing of the past.
+
+Hands-on with Java, Selenium, Rest Assured, JMeter, and modern JavaScript toolchains. I use AI tooling to speed up delivery and make test systems smarter. I ship pragmatic automation that developers actually maintain.
+
+TECHNICAL SKILLS
+• Programming: Java, Python, JavaScript, SQL
+• Test Automation: Selenium, Rest Assured, TestNG, JUnit
+• Performance Testing: JMeter, LoadRunner
+• Web Technologies: React, HTML5, CSS3, TailwindCSS
+• Tools & Frameworks: Docker, CI/CD (GitHub Actions), Maven, Git
+• Databases: MySQL, PostgreSQL, MongoDB
+
+PROFESSIONAL EXPERIENCE
+
+Senior SDET | Tech Solutions Inc | 2021 - Present
+• Built automated test frameworks reducing manual testing by 80%
+• Implemented performance testing suite using JMeter and custom monitoring
+• Led API testing strategy with Rest Assured and CI/CD integration
+• Mentored team of 5 junior QA engineers on automation best practices
+
+QA Automation Engineer | Software Innovations Ltd | 2019 - 2021
+• Developed Selenium-based UI automation framework
+• Created data-driven testing approach with Apache POI integration
+• Established testing standards and guidelines for development teams
+
+FEATURED PROJECTS
+
+Cinema Score Evaluator | Java, Selenium, Apache POI
+Scrapes IMDb & Rotten Tomatoes to compute watch-verdicts and generate Excel reports. Automated end-to-end validations; integrating Apache POI for Excel-driven test data.
+
+WaveLength (Voice Search) | JavaScript, React, Google Search API, Gemini API
+Voice-based search that suggests nearby sites and context-aware results; integrates speech recognition and LLM-powered suggestions.
+
+SRM Helper | HTML, JS, MySQL
+Campus e-portal to access notes and study material; improved availability for students.
+
+EDUCATION
+Bachelor of Technology in Computer Science
+SRM Institute of Science and Technology | 2015 - 2019
+
+CERTIFICATIONS
+• ISTQB Certified Tester - Foundation Level
+• AWS Certified Cloud Practitioner
+• Selenium WebDriver with Java Certification
