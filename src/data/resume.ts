@@ -29,20 +29,33 @@ export const resumeData = {
     ]
   },
   
-  skills: [
-    "Java",
-    "Selenium", 
-    "Rest Assured",
-    "SQL",
-    "JMeter",
-    "CI/CD (GitHub Actions)",
-    "TestNG",
-    "Usage of Python",
-    "Usage of JavaScript",
-    "React",
-    "TailwindCSS",
-    "NeedToChange-Docker"
-  ],
+skills: [
+  // Core SDET & Automation
+  "Java",
+  "Selenium",
+  "Rest Assured",
+  "API Automation",
+  "TestNG",
+  "SQL",
+  "JMeter",
+
+  // DevOps & Tooling
+  "CI/CD (GitHub Actions)",
+  "Azure DevOps",
+  "Jira",
+
+  // QA Practices
+  "Automation Testing",
+  "Manual Testing",
+  "Agile / Scrum",
+
+  // Supporting / Frontend
+  "Python (Utilities)",
+  "JavaScript (Basic)",
+  "TypeScript (Basic)",
+  "React (Basic)",
+  "Tailwind CSS"
+],
   
   contact: {
     email: "sankalppandey531@gmail.com",
@@ -79,25 +92,26 @@ export const resumeData = {
   ] as Project[],
   
   experience: [
-    {
-      role: "Senior SDET",
-      company: "Tech Solutions Inc",
-      period: "2021 - Present",
-      achievements: [
-        "Built automated test frameworks reducing manual testing by 80%",
-        "Implemented performance testing suite using JMeter and custom monitoring",
-        "Led API testing strategy with Rest Assured and CI/CD integration"
-      ]
-    },
-    {
-      role: "QA Automation Engineer",
-      company: "Software Innovations Ltd",
-      period: "2019 - 2021", 
-      achievements: [
-        "Developed Selenium-based UI automation framework",
-        "Created data-driven testing approach with Apache POI integration",
-        "Mentored junior QA engineers on automation best practices"
-      ]
-    }
-  ] as Experience[]
+  {
+    role: "SDET",
+    company: "Aumni Techworks (Polestar Global – Maritime Domain)",
+    period: "Jan 2025 – Present",
+    achievements: [
+      "Led end-to-end QA for a critical maritime sub-product delivered in 5 months under aggressive timelines",
+      "Built a Rest Assured automation framework from scratch, automating 70+ APIs and reducing repetitive effort significantly",
+      "Achieved 100% UI automation coverage with stable smoke and regression suites and zero post-release defects",
+      "Performed JMeter-based load testing for up to 500 concurrent users to validate system performance"
+    ]
+  },
+  {
+    role: "Associate QA Engineer",
+    company: "Cognizant",
+    period: "Aug 2021 – Dec 2024",
+    achievements: [
+      "Executed manual and automation testing for web applications with strong focus on functional, API, and database testing",
+      "Designed and ran sanity, integration, and regression test suites ensuring on-time, high-quality releases",
+      "Collaborated closely with developers and stakeholders to identify, track, and resolve defects in Agile SCRUM teams"
+    ]
+  }
+] as Experience[]
 };
